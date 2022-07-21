@@ -1,0 +1,2 @@
+class Moviez < ApplicationRecord
+end

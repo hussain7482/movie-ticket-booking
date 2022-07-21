@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_name: MyString
+  total_bookings: 1
+  available_bookings: 1
+
+two:
+  movie_name: MyString
+  total_bookings: 1
+  available_bookings: 1

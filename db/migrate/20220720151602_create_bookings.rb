@@ -3,7 +3,8 @@ class CreateBookings < ActiveRecord::Migration[7.0]
     create_table :bookings do |t|
       t.string :movie_id
       t.integer :seat_no
-      t.timestamp :start_date
+      t.integer :no_of_seats
+      t.timestamp :start_time
       t.date :movie_date
 
       t.timestamps

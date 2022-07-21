@@ -10,17 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_20_151602) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_21_061416) do
   create_table "bookings", force: :cascade do |t|
     t.string "movie_id"
     t.integer "seat_no"
-    t.datetime "start_date", precision: nil
+    t.integer "no_of_seats"
+    t.datetime "start_time", precision: nil
     t.date "movie_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "moviezs", force: :cascade do |t|
+    t.string "movie_name"
+    t.integer "total_bookings"
+    t.integer "available_bookings"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer "booking_id"
+    t.integer "transaction_id"
+    t.integer "user_id"
+    t.float "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "showz", force: :cascade do |t|
+    t.string "show_time"
+    t.date "show_date"
+    t.string "class"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.boolean "admin"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

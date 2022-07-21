@@ -6,13 +6,31 @@ def index
  def book
  end
 
- def booking
-    user=Bookings.new
-    user.name=params[:movie_id]
-    user.mobile=params[:seat_no]
+ def ticket
+    @total_bookings=0
+    movie=Moviez.new
+    book=Booking.new
+    user=User.new
+    #show=Show.new
+    movie.movie_name=params[:movie_name]
+    book.no_of_seats=params[:seat_no]
+    book.start_time=params[:show_time]
+    book.movie_date=params[:show_date]
+    user.name=params[:name]
+    #show.class=[:class]
     
-    user.save
-    redirect_to("/booked")
+    if @total_bookings < 100
+      user.save
+      movie.save
+      #show.save
+      book.save
+      @total_bookings+=1
+      redirect_to("/booked")
+    else
+     flash.alert = "No tickets available"
+    
+    end
+    
  end
    
     

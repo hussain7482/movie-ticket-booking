@@ -1,4 +1,42 @@
 <form action="/ticket" method="post">
-<h3>Book your Movie</h3>
-
+<h3>Book your Ticket</h3>
+<div>
+ <label>Movies:</label>
+  <select name="movie_name">
+   <option value="777 charlie">777 Charlie</option>
+   <option value="Bahubali">Bahubali 2</option>
+   <option value="KGF">KGF</option>
+   <option value="RRR">RRR</option>
+   </select>
+</div>
+<div>
+ <label>No Of Seats:</label>
+  <input type="text" name="seats"></br></br>
+</div>
+<div>
+ <label>Date:</label>
+  <input type="date" name="show_date"></br></br>
+</div>
+<div>
+ <label>Time:</label>
+  <select name="show_time">
+  <option value="2 PM">2 PM</option>
+  <option value="6 PM">6 PM</option>
+  <option value="9 PM">9 PM</option>
+  </select>
+</div>
+<div>
+ <label>Name:</label>
+  <input type="text" name="name"></br></br>
+</div>
+<div>
+ <label>Class:<label>
+  <select name="class">
+   <option value="gold">Gold</option>
+   <option value="silver">Silver</option>
+   <option value="platinum">Platinum</option>
+  </select>
+</div>
+<br>
+<input type="submit" value="Book">
 </form>
