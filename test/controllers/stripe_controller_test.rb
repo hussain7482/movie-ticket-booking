@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ShowTest < ActiveSupport::TestCase
+class StripeControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

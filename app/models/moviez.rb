@@ -1,2 +1,0 @@
-class Moviez < ApplicationRecord
-end
